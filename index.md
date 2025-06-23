@@ -1,10 +1,6 @@
 # AI Voice Assistant
 This project is an AI voice assistant robot that uses ChatGPT to respond to the user's voice inputted to a Raspberry Pi through a mic, and sends a response via a usb speaker. The robot has a servo for a neck and LED light rings for eyes, that give it a more desiarable appearance.
 <!---You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:-->
-```HTML 
-<!--- This is an HTML comment in Markdown -->
-<!--- Anything between these symbols will not render on the published site -->
-```
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
