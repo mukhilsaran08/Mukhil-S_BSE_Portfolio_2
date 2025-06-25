@@ -26,9 +26,9 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 # Second Milestone
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TGL0MrAMzSw?si=00JT6g8z1pI_kYV-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For my second milestone, I've integrated ChatGPT into the Raspberry Pi, attached a mic and speaker, and also integrated voice commands to contol the LED. When I use the Key word "Tom", the speech recognition module detects it and translates the prompt to text that is processed by ChatGPT. Then the Pi uses Text to Speech to read out the response through the Speaker. Additionally, the LED light is now voice controlled, saying "turn on the light", and "turn off the light", turns on or off the light respectiveley.
+For my second milestone, I've integrated ChatGPT into the Raspberry Pi, attached a mic and speaker, and also integrated voice commands to contol the LED. When I use the Key word "Tom", the speech recognition module detects it and translates the prompt to text that is processed by ChatGPT. Then the Pi uses Text to Speech to read out the response through the Speaker. Additionally, the LED light is now voice controlled, saying "turn on the light", and "turn off the light", turns on or off the light respectiveley. A previous challenge I faced that I overcame is setting up SSH and VNC, which now work because of the change in wifi connection. my next milestone will be to aattach the servo and LED light rings to the Raspberry Pi and program them to respond to voice commands.
 
 <!---For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
 - Technical details of what you've accomplished and how they contribute to the final goal
