@@ -68,15 +68,15 @@ void loop() {
 }
 ```
 -->
-<!---# Bill of Materials
-Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
-Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
+# Bill of Materials
+<!---Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
+Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. -->
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
+| Raspberry Pi 4B | Computer that facilitates all the functions of the robot | $Price | <a href="[https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/](https://www.amazon.com/CanaKit-Raspberry-4GB-Starter-Kit/dp/B07V5JTMV9/ref=sr_1_3?crid=3TBQLZ4FI3JCX&dib=eyJ2IjoiMSJ9.Xksc4QMnpl0XTxlxg-mR1jJ_TeNQgCwqcny5lZKOEgzdtklhgyQXueE6O71_VaAOOxKjzupXyEx_NIvo9q9VimYatbKAEZEJicxxovBW-ALnagHjjGtvbJroe7E9wYsnrcEN9iWp4Jl0kIcq3d4i-Bk9uifiC_uAnLAvzY5H85NXgnkSHj8SCOQ7oEsnvld5xIgvdrXLLyYunv8h8Stt0NgkjAVD2Gsu_d_rt8mAUf4.64K2lp3f_eyc6_dxgE9knP1ONiGVbUqWN4XOVoqOigE&dib_tag=se&keywords=canakit%2Braspberry%2Bpi%2B4&qid=1751039205&sprefix=canakit%2B%2Caps%2C148&sr=8-3&th=1)"> Link </a> |
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |-->
 
 # Starter Milestone: Retro Arcade Console
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Fn082AnFBrs?si=fmU0VKUEW8ycNR5p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
