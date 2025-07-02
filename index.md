@@ -16,14 +16,6 @@ This project is an AI voice assistant robot that uses ChatGPT to respond to the 
 
 For my final milestone, I've integrated two LED light rings for eyes, enabled the servo to respond to voice commands like "look left", "look right", and "look staraight". I used CAD cad make the 3D printed enclosure to make it look like a friendley robot assistant, and assembled all my components into it. My biggest challenges while doing this project were trying to install different libraries to control different parts of the robot, since the Rapberry PI uses virtual environements to function, and debugging code to figure out why ChatGPT wouldn't respond sometimes. Key concepts I learned during my time in Bluestamp include soldering, microcontrollers, debugging, circuits, and project documenting. In the future, I would like to learn PCB design, more python, and better speaking skills.
 
-For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestone
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE-->
-
-
-
 # Second Milestone
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TGL0MrAMzSw?si=00JT6g8z1pI_kYV-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
