@@ -42,24 +42,132 @@ A significant challenge I that still needs to be addressed is setting up SSH and
 - What your plan is to complete your project
 
 # Schematics 
-Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
+Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. -->
 
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
 ```c++
-void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("Hello World!");
-}
-
-void loop() {
-  // put your main code here, to run repeatedly:
-
-}
+import lgpio 
+import speech_recognition as sr 
+import pyttsx3 
+import openai 
+from gpiozero import LED 
+from time import sleep 
+import RPi.GPIO as GPIO  # Imports the standard Raspberry Pi GPIO library 
+GPIO.setmode(GPIO.BOARD) # Sets the pin numbering system to use the physical layout 
+led = LED(18) 
+GPIO.setup(16,GPIO.OUT)  # Sets up pin 23 to an output (instead of an input) 
+p = GPIO.PWM(16, 50)     # Sets up pin 23 as a PWM pin 
+p.start(0)               
+# Starts running PWM on the pin and sets it to 0 
+# initializing pyttsx3 
+listening = True 
+engine = pyttsx3.init() 
+# Set your opeai api key and customize the chatgpt role 
+openai.api_key = 
+"sk-proj-8mBzxu0P8kanji7640I6qULGyluz6WcZbtD6pz2eAunwpYQRMZrjiiM4qTCwgNRcQotmr
+ VqxtNT3BlbkFJGEyZzr-YI83Dd_ntnMU6sbmxyB3dn0OW5dGygKywhvODpB9Klw5F2Zr8w5NY
+ DHbctU_46u_1EA" 
+messages = [{"role": "system", "content": "Your name is Tom and give answers in two lines"}] 
+# CCustomizing the output voices 
+voices = engine.getProperty('voices') 
+rate = engine.getProperty('rate') 
+volume = engine.getProperty('volume') 
+# RELAY_GPIO_PIN = 18 
+# INITIALIZE THE gpio 
+h = lgpio.gpiochip_open(4) 
+# set up GPIO pin as output for the relay 
+#lgpio.gpio_claim_output(h, RELAY_GPIO_PIN) 
+def get_responses(user_input): 
+messages.append({"role": "user", "content":user_input}) 
+response = openai.ChatCompletion.create( 
+model="gpt-3.5-turbo", 
+messages=messages 
+ ) 
+ ChatGPT_reply = response["choices"][0]["message"]["content"] 
+ messages.append({"role": "assistant", "content": ChatGPT_reply}) 
+ return ChatGPT_reply 
+  
+def turn_on_light(): 
+ led.on() 
+ print("Light turned ON") 
+  
+def turn_off_light(): 
+ led.off() 
+ print("Light turned OFF") 
+  
+def look_left(): 
+ p.ChangeDutyCycle(10)     # Changes the pulse width to 3 (so moves the servo) 
+ sleep(1)                 # Wait 1 second 
+ p.ChangeDutyCycle(0) 
+ print("Looking left") 
+  
+def look_right(): 
+ p.ChangeDutyCycle(5)    # Changes the pulse width to 12 (so moves the servo) 
+ sleep(1) 
+ p.ChangeDutyCycle(0) 
+ print ("Looking right") 
+  
+def look_straight(): 
+ p.ChangeDutyCycle(7.5)    # Changes the pulse width to 12 (so moves the servo) 
+ sleep(1) 
+ p.ChangeDutyCycle(0) 
+ print ("Looking straight") 
+  
+while listening: 
+ with sr.Microphone() as source: 
+  recognizer = sr.Recognizer() 
+  recognizer.adjust_for_ambient_noise(source) 
+  recognizer.dynamic_energy_threshold = 3000 
+   
+  try: 
+   print("Listening...") 
+   audio = recognizer.listen(source, timeout=5.0) 
+   response = recognizer.recognize_google(audio) 
+   print(response) 
+    
+   if "tom" in response.lower(): 
+     
+    response_from_openai = get_responses(response) 
+    engine.setProperty('rate',120) 
+    engine.setProperty('volue', volume) 
+    engine.setProperty('voice', 'greek') 
+    engine.say(response_from_openai) 
+    engine.runAndWait() 
+     
+   elif "turn on the light" in response.lower(): 
+    turn_on_light() 
+     
+   elif "turn off the light" in response.lower(): 
+    turn_off_light() 
+     
+   elif "look left" in response.lower(): 
+    look_left() 
+     
+   elif "look right" in response.lower(): 
+    look_right() 
+     
+   elif "look straight" in response.lower(): 
+    look_straight() 
+     
+   else: 
+     print("Didn't recognize 'turn on the light' of 'turn off the 
+light'.") 
+      
+  except sr.UnknownValueError: 
+   print("Didn't recognize anything.") 
+ 
+# Clean up everything 
+p.stop()                 # At the end of the program, stop the PWM 
+GPIO.cleanup()           # Resets the GPIO pins back to defaults    
+# Clean up GPIO on exit 
+#lgpio.gpiochip_close(h) 
+print("GPIO cleanup completed") 
+ 
+ 
 ```
--->
+
 # Bill of Materials
 <!---Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
 Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. -->
