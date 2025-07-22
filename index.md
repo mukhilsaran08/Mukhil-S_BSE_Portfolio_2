@@ -8,7 +8,7 @@ This project is an AI voice assistant robot that uses ChatGPT to respond to the 
 
 <!---**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**-->
 
-![Headstone Image](MukhilS.png)
+<img src="MukhilS.png" alt="Alt Text" width="500" height="700">
 
 # Final Milestone
 
